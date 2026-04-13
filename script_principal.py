@@ -16,8 +16,8 @@ load_dotenv()
 
 class AppConfig:
     POPPLER_PATH = os.getenv("POPPLER_PATH", None)
-    GEMINI_API_KEY = os.getenv("GEMINI_API_KEYS")
-    MODEL_NAME = os.getenv("MODEL", "gemini-1.5-flash")  # <= modelo válido
+    GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+    MODEL_NAME = os.getenv("MODEL", "gemini-1.0-pro-vision")
     MAX_PDF_PAGES = 8
     IMAGE_SIZE = (1200, 1200)
 
