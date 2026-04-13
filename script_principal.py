@@ -123,12 +123,12 @@ app = FastAPI(title="API Facturas IA", version="1.0")
 # CORS: permitir llamadas desde tu frontend (ajusta los orígenes en producción)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # en producción pon aquí tu dominio de InfinityFree
+    # Dominio público de tu frontend en InfinityFree
+    allow_origins=["https://facturasmart.page.gd"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 @app.post("/procesar")
 async def procesar_facturas(files: List[UploadFile] = File(...)):
     if not files:
