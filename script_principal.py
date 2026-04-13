@@ -15,11 +15,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 class AppConfig:
-    # En Render/Linux no se suele necesitar ruta manual, se detecta solo
-    POPPLER_PATH = os.getenv("POPPLER_PATH", None) 
+    POPPLER_PATH = os.getenv("POPPLER_PATH", None)
     GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-    # Ojo: el modelo actual más estable es gemini-1.5-flash (revisa el nombre)
-    MODEL_NAME = os.getenv("MODEL", "gemini-1.5-flash") 
+    MODEL_NAME = os.getenv("MODEL", "gemini-1.5-flash")  # <= modelo válido
     MAX_PDF_PAGES = 8
     IMAGE_SIZE = (1200, 1200)
 
